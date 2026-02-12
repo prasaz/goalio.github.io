@@ -1,29 +1,205 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Goalio Privacy Policy</title>
+  <meta name="description" content="Goalio privacy policy and data handling details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; line-height: 1.65; color: #111; }
-    h1, h2 { margin-top: 24px; margin-bottom: 8px; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color: #666; font-size: 14px; }
+    :root {
+      --bg: #f6f8f7;
+      --surface: #ffffff;
+      --ink: #1a2522;
+      --muted: #5a6763;
+      --brand: #0b8f76;
+      --brand-strong: #087460;
+      --line: #dce3e0;
+      --shadow: 0 18px 40px rgba(10, 44, 37, 0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at -20% -10%, #b8efe1 0%, transparent 60%),
+        radial-gradient(700px 320px at 110% 10%, #ffe4b8 0%, transparent 60%),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      width: min(920px, 92vw);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 46px 0 18px;
+      animation: rise 450ms ease-out both;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ddf7f1;
+      color: #0f6a58;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 12px 0 8px;
+      font-family: "Fraunces", serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 120ms ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+    }
+    .btn-secondary {
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin: 14px 0 30px;
+      animation: rise 380ms ease-out both;
+    }
+
+    h2 {
+      margin: 22px 0 8px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    p, li { color: var(--muted); }
+    ul { margin: 8px 0 0 20px; }
+
+    footer {
+      padding: 0 0 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <h1>Goalio Privacy Policy</h1>
-  <p class="muted">Last updated: February 12, 2026</p>
+  <header class="hero wrap">
+    <span class="badge">Goalio Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="sub">Last updated: February 12, 2026</p>
+    <div class="actions">
+      <a class="btn btn-secondary" href="./index.html">Back to Support</a>
+      <a class="btn btn-primary" href="mailto:prasanna.sliit@gmail.com">Contact Support</a>
+    </div>
+  </header>
 
-  <p>Goalio stores your goal data on-device. If you enable iCloud sync, data syncs via Apple CloudKit.</p>
-  <p>Goalio uses notification permission only to send reminders you enable.</p>
-  <p>Goalio widgets read limited goal snapshot data via Apple App Groups.</p>
-  <p>Goalio does not sell your personal data.</p>
+  <main class="wrap">
+    <article class="card">
+      <p>
+        Goalio ("we", "us", or "our") provides a goal-tracking app for iOS. This Privacy Policy explains what information Goalio processes, how it is used, and your choices.
+      </p>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <h2>1. Information We Process</h2>
+      <p>When you use Goalio, the app processes data you enter, including:</p>
+      <ul>
+        <li>Goal titles, goal settings, progress values, and completion history</li>
+        <li>Reminder preferences (frequency, time, selected weekday/custom interval)</li>
+        <li>Appearance settings (colors, emoji, optional goal icon photos)</li>
+        <li>In-app preferences (for example, week start day, widget theme)</li>
+      </ul>
 
-  <p><a href="./index.html">Back to Support</a></p>
+      <h2>2. How We Use Information</h2>
+      <ul>
+        <li>To provide goal tracking features and progress calculations</li>
+        <li>To schedule local notifications you explicitly enable</li>
+        <li>To display widgets and keep widget content in sync</li>
+        <li>To sync data across your devices when iCloud Sync is enabled</li>
+      </ul>
+
+      <h2>3. Storage and Sync</h2>
+      <ul>
+        <li>By default, goal data is stored on-device.</li>
+        <li>If iCloud Sync is enabled, data syncs via Apple CloudKit tied to your Apple ID.</li>
+        <li>Widget data uses Apple App Group storage shared between app and widget extension.</li>
+      </ul>
+
+      <h2>4. Data Sharing</h2>
+      <p>
+        Goalio does not sell your personal data and does not use third-party ad profiling.
+        Data may be processed by Apple platform services when needed for iCloud sync, notifications, and widgets.
+      </p>
+
+      <h2>5. Permissions</h2>
+      <ul>
+        <li><b>Notifications:</b> used only for reminders you enable.</li>
+        <li><b>Photo Library (if requested):</b> used only to select a custom goal icon.</li>
+      </ul>
+
+      <h2>6. Data Retention</h2>
+      <ul>
+        <li>On-device data remains until you delete it or uninstall the app.</li>
+        <li>Synced iCloud data remains according to your iCloud account state and deletions.</li>
+      </ul>
+
+      <h2>7. Your Controls</h2>
+      <ul>
+        <li>Edit or delete goals at any time in-app.</li>
+        <li>Disable reminders globally or per goal.</li>
+        <li>Disable iCloud Sync in app settings.</li>
+        <li>Change permissions anytime in iOS Settings.</li>
+      </ul>
+
+      <h2>8. Contact</h2>
+      <p>
+        For privacy or support questions: <a href="mailto:you@example.com">you@example.com</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    Goalio Privacy Policy · <a href="./index.html">Support Home</a>
+  </footer>
 </body>
 </html>
